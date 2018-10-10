@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import { childrenShape } from '@shapes';
+import shapes from '@shapes';
+
+const { childrenShape } = shapes; // Work around for error when doing import { childrenShape } from '@shapes';
 
 const App = ({ children }) => (
   <div className="content-container">

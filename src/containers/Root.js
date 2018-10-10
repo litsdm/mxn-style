@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux';
-import { storeShape } from '@shapes';
+import shapes from '@shapes';
 
 import Routes from '../routes';
+
+const { storeShape } = shapes;
 
 const Root = ({ store, history }) => (
   <Provider store={store}>
