@@ -1,0 +1,14 @@
+@import '~@globalStyles';
+
+.container {
+  height: 1080px;
+  margin-top: $u * (-10);
+  padding: 0 $u * 8;
+}
+
+.contentCard {
+  background: linear-gradient(#fff 5%, #FBFBFD 95%);
+  border-radius: 6px;
+  height: 100%;
+  padding: $u * 8;
+}

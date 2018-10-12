@@ -1,0 +1,54 @@
+@import '~@globalStyles';
+
+.container {
+  height: 630px;
+  background: url('https://s3-us-west-1.amazonaws.com/mxnstyle-bucket/mxnStyle.png') no-repeat local center;
+  background-size: 100%;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  color: #fff;
+  height: $u * 5;
+  justify-content: space-between;
+  left: 0;
+  padding: $u * 2 $u * 9;
+  padding-right: $u * 5;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.left {
+  width: 100%;
+
+  p {
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  a {
+    margin-right: $u * 4;
+  }
+}
+
+.singleImage {
+  height: 100%;
+  width: 100%;
+}
+
+.divider {
+  background-color: white;
+  height: 18px;
+  margin-right: 24px;
+  opacity: 0.6;
+  width: 1px;
+}
