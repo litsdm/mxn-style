@@ -1,0 +1,84 @@
+@import '~@globalStyles';
+
+.container {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  position: absolute;
+  top: -14px;
+  width: 224px;
+}
+
+.circle {
+  align-items: center;
+  display: flex;
+  flex-basis: 25%;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+
+  p {
+    font-size: 12px;
+    opacity: 0.5;
+  }
+
+  div {
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+
+    i {
+      color: #fff;
+      display: none;
+    }
+
+    p {
+      color: #fff;
+      display: none;
+      font-weight: bold;
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    p {
+      opacity: 1;
+    }
+
+    div {
+      background-color: $mxn-purple;
+      border-color: $mxn-purple;
+
+      p {
+        display: block;
+      }
+    }
+  }
+
+  &.done {
+    div {
+      background-color: $accent-purple;
+      border-color: $accent-purple;
+
+      i {
+        display: block;
+      }
+    }
+  }
+}
+
+.bar {
+  background-color: #ccc;
+  height: 2px;
+  flex-basis: 16.5%;
+  margin-left: -78px;
+  margin-right: -78px;
+  width: 100%;
+}

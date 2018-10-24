@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  opacity: 0.6;
+  outline: none;
+  transition: 0.1s ease all;
+
+  i {
+    font-size: 24px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

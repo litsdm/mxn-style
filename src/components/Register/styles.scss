@@ -1,0 +1,60 @@
+@import '~@globalStyles';
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo {
+  margin-bottom: $u * 4;
+
+  p {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
+}
+
+.contentCard {
+  background-color: #fff;
+  border-radius: $u;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  display: flex;
+  flex-direction: column;
+  min-width: 336px;
+  padding: $u * 4;
+  padding-top: $u * 6;
+  position: relative;
+  transition: 0.2s ease all;
+}
+
+.label {
+  display: flex;
+  color: rgba(0, 0, 0, 0.6);
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+
+  input {
+    background-color: rgba(96,125,139, 0.05);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 6px;
+    outline: none;
+    padding: 6px;
+  }
+}
+
+.err {
+  color: $red;
+  font-size: 10px;
+  text-transform: none;
+}

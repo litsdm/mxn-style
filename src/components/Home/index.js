@@ -1,13 +1,18 @@
 import React, { Fragment } from 'react';
+import { bool } from 'prop-types';
 
 import Header from './Header';
 import Content from './Content';
 
-const Home = () => (
+const Home = ({ fixTopBar }) => (
   <Fragment>
-    <Header />
+    <Header fixTopBar={fixTopBar} />
     <Content />
   </Fragment>
 );
+
+Home.propTypes = {
+  fixTopBar: bool.isRequired
+};
 
 export default Home;

@@ -1,0 +1,73 @@
+@import '~@globalStyles';
+
+.nav,
+.navTransparent {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  color: #000;
+  height: $u * 5;
+  justify-content: space-between;
+  left: 0;
+  padding: $u * 2 $u * 9;
+  padding-right: $u * 5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.3s ease all;
+  z-index: 15;
+}
+
+.nav {
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  border-bottom-style: solid;
+  border-width: 1px;
+  position: fixed;
+
+  a {
+    color: #000;
+  }
+}
+
+.navTransparent .divider {
+  background-color: #fff;
+}
+
+.navTransparent {
+  background-color: transparent;
+  color: #fff;
+}
+
+.left {
+  width: 100%;
+
+  a {
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    letter-spacing: 1px;
+    opacity: 1;
+  }
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  a {
+    margin-right: $u * 4;
+  }
+}
+
+.singleImage {
+  height: 100%;
+  width: 100%;
+}
+
+.divider {
+  background-color: #000;
+  height: 18px;
+  margin-right: 24px;
+  opacity: 0.6;
+  width: 1px;
+}

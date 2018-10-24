@@ -37,4 +37,37 @@ export const products = [
   }
 ]
 
-export const designers = [];
+export const estados = [
+  'Aguascalientes',
+  'Baja California',
+  'Baja California Sur',
+  'Campeche',
+  'Ciudad de México',
+  'Coahuila de Zaragoza',
+  'Colima',
+  'Chiapas',
+  'Chihuahua',
+  'Durango',
+  'Guanajuato',
+  'Guerrero',
+  'Hidalgo',
+  'Jalisco',
+  'México',
+  'Michoacán de Ocampo',
+  'Morelos',
+  'Nayarit',
+  'Nuevo León',
+  'Oaxaca',
+  'Puebla',
+  'Querétaro',
+  'Quintana Roo',
+  'San Luis Potosí',
+  'Sinaloa',
+  'Sonora',
+  'Tabasco',
+  'Tamaulipas',
+  'Tlaxcala',
+  'Veracruz de Ignacio de la Llave',
+  'Yucatán',
+  'Zacatecas'
+]
