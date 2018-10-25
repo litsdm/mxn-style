@@ -12,7 +12,7 @@ class RegisterPage extends Component {
     errors: {},
     password: '',
     address: {
-      state: '',
+      state: 'Ciudad de México',
       street: '',
       exterior: '',
       interior: '',

@@ -6,8 +6,10 @@ import styles from './styles.scss';
 import ProgressCircles from './ProgressCircles';
 import DesignerForm from './DesignerForm';
 import AccountForm from './AccountForm';
+import AddressForm from './AddressForm';
+import LastStep from './LastStep';
 
-const { designerErrorsShape } = shapes;
+const { addressShape, designerErrorsShape } = shapes;
 
 const Register = ({
   email,
@@ -19,7 +21,8 @@ const Register = ({
   page,
   goToPage,
   errors,
-  setState
+  setState,
+  address
 }) => {
   const renderContent = () => {
     switch (page) {
@@ -46,6 +49,17 @@ const Register = ({
             setState={setState}
           />
         );
+      case 2:
+        return (
+          <AddressForm
+            address={address}
+            errors={errors}
+            setState={setState}
+            goToPage={goToPage}
+          />
+        );
+      case 3:
+        return <LastStep />
       default:
         return <div>Content</div>
     }
@@ -76,7 +90,8 @@ Register.propTypes = {
   page: number.isRequired,
   goToPage: func.isRequired,
   errors: designerErrorsShape.isRequired,
-  setState: func.isRequired
+  setState: func.isRequired,
+  address: addressShape.isRequired
 };
 
 export default Register;

@@ -5,5 +5,9 @@ export default shape({
   name: string,
   brandName: string,
   depositAccount: string,
-  password: string
+  password: string,
+  street: string,
+  exterior: string,
+  city: string,
+  postalCode: string
 });
