@@ -70,4 +70,101 @@ export const estados = [
   'Veracruz de Ignacio de la Llave',
   'Yucatán',
   'Zacatecas'
+];
+
+export const dropdownData = [
+  {
+    url: '/#',
+    text: 'Pantalones'
+  },
+  {
+    url: '/#',
+    text: 'Calcetines'
+  },
+  {
+    url: '/#',
+    text: 'Accesorios'
+  },
+  {
+    url: '/#',
+    text: 'Carteras'
+  },
+  {
+    url: '/#',
+    text: 'Zapatos'
+  },
+  {
+    url: '/#',
+    text: 'Llaveros'
+  },
+  {
+    url: '/#',
+    text: 'Tequileros'
+  }
+];
+
+export const dropdownCategoryData = [
+  {
+    title: 'Hombres',
+    items: [
+      {
+        url: '/#',
+        text: 'Pantalones'
+      },
+      {
+        url: '/#',
+        text: 'Calcetines'
+      },
+      {
+        url: '/#',
+        text: 'Accesorios'
+      },
+      {
+        url: '/#',
+        text: 'Carteras'
+      },
+      {
+        url: '/#',
+        text: 'Zapatos'
+      },
+    ]
+  },
+  {
+    title: 'Mujeres',
+    items: [
+      {
+        url: '/#',
+        text: 'Tops'
+      },
+      {
+        url: '/#',
+        text: 'Pantalones'
+      },
+      {
+        url: '/#',
+        text: 'Zapatos'
+      },
+      {
+        url: '/#',
+        text: 'Bolsas'
+      },
+      {
+        url: '/#',
+        text: 'Accesorios'
+      },
+    ]
+  },
+  {
+    title: 'Otros',
+    items: [
+      {
+        url: '/#',
+        text: 'Llaveros'
+      },
+      {
+        url: '/#',
+        text: 'Tequileros'
+      },
+    ]
+  }
 ]

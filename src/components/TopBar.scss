@@ -15,7 +15,7 @@
   right: 0;
   top: 0;
   transition: 0.3s ease all;
-  z-index: 15;
+  z-index: 10;
 }
 
 .nav {
@@ -53,10 +53,6 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
-
-  a {
-    margin-right: $u * 4;
-  }
 }
 
 .singleImage {

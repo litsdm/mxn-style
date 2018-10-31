@@ -1,0 +1,28 @@
+.container {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  color: #000;
+  display: none;
+  flex-wrap: wrap;
+  max-height: 160px;
+  padding: 24px;
+  position: absolute;
+  top: 18px;
+  transition: 0s display;
+
+  &:hover {
+    display: flex;
+    transition-delay: 1s;
+  }
+}
+
+.dataTitle {
+  font-weight: 600;
+}
+
+.dataItem {
+  color: #000;
+  display: block;
+  margin: 6px 0;
+}

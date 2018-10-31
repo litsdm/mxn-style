@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 import { bool } from 'prop-types';
 import styles from './TopBar.scss';
 
+import DropdownContainer from './DropdownContainer';
+
+import { dropdownCategoryData, dropdownData } from '@fixtures';
+
 const TopBar = ({ transparent, display }) => (
   <div
     className={transparent ? styles.navTransparent : styles.nav}
-    style={{ opacity: display ? 1 : 0 }}
+    style={{ opacity: display ? 1 : 0, zIndex: display ? 10 : -1 }}
   >
     <div className={styles.left}>
       <Link to="/">
@@ -14,17 +18,11 @@ const TopBar = ({ transparent, display }) => (
       </Link>
     </div>
     <div className={styles.right}>
-      <Link to="#">
-        New Arrivals
-      </Link>
-      <Link to="#">
-        Hombres
-      </Link>
-      <Link to="#">
-        Mujeres
-      </Link>
+      <DropdownContainer text="New Arrivals" url="/#" data={dropdownCategoryData} />
+      <DropdownContainer text="Hombres" url="/#" data={dropdownData} />
+      <DropdownContainer text="Mujeres" url="/#" data={dropdownCategoryData} />
       <div className={styles.divider} />
-      <Link to="/register">
+      <Link to="/register" style={{ marginRight: '24px' }}>
         Registro Diseñador
       </Link>
       <Link to="/cart">

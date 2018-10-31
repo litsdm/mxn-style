@@ -1,0 +1,15 @@
+.dropdownContainer {
+  position: relative;
+  margin-right: 24px;
+
+  .dropdown {
+    transition: 0s display;
+  }
+
+  &:hover {
+    .dropdown {
+      display: flex !important;
+      transition-delay: 1s;
+    }
+  }
+}
