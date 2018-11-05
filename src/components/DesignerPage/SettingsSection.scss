@@ -1,0 +1,29 @@
+@import '~@globalStyles';
+
+.container {
+  display: none;
+  margin-bottom: $u * 2;
+
+  &.display {
+    display: block;
+  }
+}
+
+.title {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: $u * 3;
+  font-weight: bold;
+  outline: none;
+  padding: 0;
+  text-transform: capitalize;
+
+  i {
+    margin-left: $u;
+  }
+}
+
+.content {
+  padding-top: $u * 2;
+}

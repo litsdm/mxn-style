@@ -1,0 +1,9 @@
+@import '~@globalStyles';
+
+.container {
+  background-color: #F9F9F9;
+  height: 100%;
+  padding: $u * 8;
+  padding-top: $u * 30;
+  position: relative;
+}
