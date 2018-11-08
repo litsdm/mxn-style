@@ -1,16 +1,25 @@
 import React, { Fragment } from 'react';
 import { bool, func, string } from 'prop-types';
+import shapes from '@shapes';
 import styles from './styles.scss';
 
 import Header from './Header';
 import Content from './Content';
 import Settings from './Settings';
 
-const DesignerPage = ({ settingsPos, setState, displaySettings }) => (
+const { userShape } = shapes;
+
+const DesignerPage = ({ settingsPos, setState, displaySettings, user, setStylesheet }) => (
   <Fragment>
-    <Header setState={setState} />
+    <Header stylesheet={user.stylesheet || {}} />
     <Content />
-    <Settings position={settingsPos} setState={setState} display={displaySettings} />
+    <Settings
+      position={settingsPos}
+      setState={setState}
+      display={displaySettings}
+      user={user}
+      setStylesheet={setStylesheet}
+    />
     <button
       type="button"
       className={styles.displaySettings}
@@ -24,7 +33,13 @@ const DesignerPage = ({ settingsPos, setState, displaySettings }) => (
 DesignerPage.propTypes = {
   settingsPos: string.isRequired,
   setState: func.isRequired,
-  displaySettings: bool.isRequired
+  displaySettings: bool.isRequired,
+  setStylesheet: func.isRequired,
+  user: userShape
+};
+
+DesignerPage.defaultProps = {
+  user: {}
 };
 
 export default DesignerPage;

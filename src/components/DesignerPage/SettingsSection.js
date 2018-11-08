@@ -7,7 +7,7 @@ const { childrenShape } = shapes;
 
 class SettingsSection extends Component {
   state = {
-    displayContent: false
+    displayContent: true
   }
 
   render() {

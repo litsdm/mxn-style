@@ -1,8 +1,12 @@
 import React from 'react';
 import { bool, func, string } from 'prop-types';
+import shapes from '@shapes';
 import styles from './Settings.scss';
 
 import Section from './SettingsSection';
+import ColorPicker from '../ColorPicker';
+
+const { userShape } = shapes;
 
 const positionStyles = {
   left: styles.containerLeft,
@@ -10,7 +14,7 @@ const positionStyles = {
   down: styles.containerDown
 }
 
-const Settings = ({ position, setState, display }) => (
+const Settings = ({ position, setState, display, user: { stylesheet }, setStylesheet }) => (
   <div className={`${positionStyles[position]} ${display ? styles.display : {}}`}>
     <div className={styles.controls}>
       <button
@@ -55,6 +59,10 @@ const Settings = ({ position, setState, display }) => (
           Recomendado: 1920 x 576. Ratio: 3.33
         </p>
       </div>
+      <p className={styles.subTitle}>
+        Color de Fondo
+      </p>
+      <ColorPicker selectedColor={stylesheet.bgColor} setStylesheet={setStylesheet} />
       <div className={styles.imageSelect}>
         <p className={styles.subTitle}>
           Imagen de Perfil
@@ -83,7 +91,13 @@ const Settings = ({ position, setState, display }) => (
 Settings.propTypes = {
   position: string.isRequired,
   setState: func.isRequired,
-  display: bool.isRequired
+  display: bool.isRequired,
+  setStylesheet: func.isRequired,
+  user: userShape
+};
+
+Settings.defaultProps = {
+  user: null
 };
 
 export default Settings;
