@@ -1,5 +1,5 @@
 export const ADD_USER = 'ADD_USER';
-export const SET_STYLESHEET = 'SET_STYLESHEET';
+export const UPDATE_USER = 'UPDATE_USER';
 
 export const addUser = (user) => (
   {
@@ -8,9 +8,9 @@ export const addUser = (user) => (
   }
 );
 
-export const setStylesheet = (stylesheet) => (
+export const updateUser = (properties) => (
   {
-    type: SET_STYLESHEET,
-    stylesheet
+    type: UPDATE_USER,
+    properties
   }
 )

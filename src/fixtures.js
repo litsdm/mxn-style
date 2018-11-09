@@ -179,7 +179,7 @@ export const fakeUser = {
     exterior: '#2693',
     interior: 'B1204',
     postalCode: '11910',
-    city: 'Mexico City'
+    city: 'Miguel Hidalgo'
   },
   stylesheet: {
     bgColor: '#512DA8',

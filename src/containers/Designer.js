@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { func } from 'prop-types';
 import shapes from '@shapes';
 
-import { setStylesheet } from '@actions/user';
+import { updateUser } from '@actions/user';
 
 import DesignerComponent from '@components/DesignerPage';
 
@@ -16,7 +16,7 @@ const mapStateToProps = ({ user }) => (
 );
 
 const mapDispatchToProps = dispatch => ({
-  dSetStylesheet: stylesheet => dispatch(setStylesheet(stylesheet)),
+  dUpdateUser: properties => dispatch(updateUser(properties)),
 });
 
 class DesignerPage extends Component {
@@ -26,14 +26,15 @@ class DesignerPage extends Component {
   };
 
   setStylesheetProperties = (properties) => {
-    const { dSetStylesheet, user: { stylesheet } } = this.props;
-    dSetStylesheet({ ...stylesheet, ...properties });
+    const { dUpdateUser, user: { stylesheet } } = this.props;
+    const newStylesheet = { ...stylesheet, ...properties };
+    dUpdateUser({ stylesheet: newStylesheet });
   }
 
   receiveState = (newState) => this.setState(newState);
 
   render() {
-    const { user } = this.props;
+    const { dUpdateUser, user } = this.props;
     const { settingsPos, displaySettings } = this.state;
     return (
       <DesignerComponent
@@ -42,6 +43,7 @@ class DesignerPage extends Component {
         displaySettings={displaySettings}
         user={user}
         setStylesheet={this.setStylesheetProperties}
+        updateUser={dUpdateUser}
       />
     );
   }
@@ -49,7 +51,7 @@ class DesignerPage extends Component {
 
 DesignerPage.propTypes = {
   user: userShape,
-  dSetStylesheet: func.isRequired
+  dUpdateUser: func.isRequired
 };
 
 DesignerPage.defaultProps = {

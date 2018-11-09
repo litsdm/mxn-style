@@ -1,14 +1,23 @@
 import React from 'react';
+import shapes from '@shapes';
 import styles from './DesignerCard.scss';
 
-const DesignerCard = () => (
+const { userShape } = shapes;
+
+const DesignerCard = ({
+  user: {
+    brandName,
+    profilePic,
+    address: { city, state }
+  }
+}) => (
   <div className={styles.container}>
-    <img src="https://pbs.twimg.com/profile_images/979066646944890880/DmU2eg7s_400x400.jpg" alt="designer identity" />
+    <img src={profilePic} alt="designer identity" />
     <div className={styles.info}>
-      <p className={styles.name}>Mexican Style</p>
+      <p className={styles.name}>{brandName}</p>
       <p className={styles.location}>
         <i className="fa fa-map-marker-alt" />
-        Merida, Yucatan
+        {`${city}, ${state}`}
       </p>
     </div>
     <div className={styles.socials}>
@@ -27,5 +36,9 @@ const DesignerCard = () => (
     </div>
   </div>
 );
+
+DesignerCard.propTypes = {
+  user: userShape.isRequired
+};
 
 export default DesignerCard;

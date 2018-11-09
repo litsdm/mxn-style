@@ -1,20 +1,19 @@
 import jwtDecode from 'jwt-decode';
-import { ADD_USER, SET_STYLESHEET } from '../actions/user';
+import { ADD_USER, UPDATE_USER } from '../actions/user';
 
 import { fakeUser } from '@fixtures';
 
 const token = localStorage.getItem('mxnToken');
 const initialState = token ? jwtDecode(token) : fakeUser;
-console.log(initialState);
 
-const users = (state = initialState, { type, user, stylesheet }) => {
+const users = (state = initialState, { type, user, properties }) => {
   switch (type) {
     case ADD_USER:
       return user;
-    case SET_STYLESHEET:
+    case UPDATE_USER:
       return {
-        ...user,
-        stylesheet
+        ...state,
+        ...properties
       };
     default:
       return state;

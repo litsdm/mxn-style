@@ -9,16 +9,17 @@ import Settings from './Settings';
 
 const { userShape } = shapes;
 
-const DesignerPage = ({ settingsPos, setState, displaySettings, user, setStylesheet }) => (
+const DesignerPage = ({ settingsPos, setState, displaySettings, user, setStylesheet, updateUser }) => (
   <Fragment>
     <Header stylesheet={user.stylesheet || {}} />
-    <Content />
+    <Content user={user} />
     <Settings
       position={settingsPos}
       setState={setState}
       display={displaySettings}
       user={user}
       setStylesheet={setStylesheet}
+      updateUser={updateUser}
     />
     <button
       type="button"
@@ -35,6 +36,7 @@ DesignerPage.propTypes = {
   setState: func.isRequired,
   displaySettings: bool.isRequired,
   setStylesheet: func.isRequired,
+  updateUser: func.isRequired,
   user: userShape
 };
 

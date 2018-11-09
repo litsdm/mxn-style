@@ -6,8 +6,8 @@ import TopBar from '../TopBar';
 
 const { stylesheetShape } = shapes;
 
-const Header = ({ stylesheet: { bgColor } }) => (
-  <div className={styles.container} style={{ backgroundColor: bgColor }}>
+const Header = ({ stylesheet: { bgColor, bgImage } }) => (
+  <div className={styles.container} style={{ backgroundImage: `url(${bgImage})`, backgroundColor: bgColor }}>
     <TopBar transparent />
   </div>
 );
