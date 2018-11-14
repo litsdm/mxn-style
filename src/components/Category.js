@@ -11,7 +11,7 @@ const { productShape } = shapes;
 
 const PRODUCTS_PER_ROW = 4;
 
-const Category = ({ title, showUrl, isCarousel, rows, products }) => {
+const Category = ({ addPadding, title, showUrl, isCarousel, rows, products }) => {
   const maxItems = rows * PRODUCTS_PER_ROW;
 
   const renderCarousel = () => {
@@ -35,7 +35,7 @@ const Category = ({ title, showUrl, isCarousel, rows, products }) => {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={addPadding ? { padding: '0 48px' } : {}}>
       <Link to={showUrl || '#'} className={styles.showAll} style={showUrl ? { cursor: 'default' } : {}}>
         <p className={styles.title}>
           {title}
@@ -55,6 +55,7 @@ const Category = ({ title, showUrl, isCarousel, rows, products }) => {
 };
 
 Category.propTypes = {
+  addPadding: bool,
   title: string.isRequired,
   showUrl: string,
   isCarousel: bool,
@@ -63,6 +64,7 @@ Category.propTypes = {
 };
 
 Category.defaultProps = {
+  addPadding: false,
   showUrl: null,
   isCarousel: false,
   rows: 1

@@ -1,0 +1,42 @@
+@import '~@globalStyles';
+
+.container {
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: $u * 55;
+  justify-content: center;
+  margin-bottom: $u * 8;
+  width: 100%;
+}
+
+.text {
+  color: #fff;
+  font-size: $u * 3;
+  margin-bottom: $u * 2;
+  max-width: 420px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+
+  a {
+    border-radius: $u;
+    margin-right: $u * 2;
+    opacity: 0.9;
+    padding: $u * 2 $u * 3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.secondary {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid;
+}

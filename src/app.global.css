@@ -28,7 +28,9 @@ li {
 
 a {
   color: white;
+  cursor: pointer;
   opacity: 1;
+  outline: none;
   text-decoration: none;
 }
 
