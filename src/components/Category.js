@@ -11,7 +11,7 @@ const { productShape } = shapes;
 
 const PRODUCTS_PER_ROW = 4;
 
-const Category = ({ addPadding, title, showUrl, isCarousel, rows, products }) => {
+const Category = ({ addPadding, title, showUrl, isCarousel, rows, products, accentColor }) => {
   const maxItems = rows * PRODUCTS_PER_ROW;
 
   const renderCarousel = () => {
@@ -24,7 +24,7 @@ const Category = ({ addPadding, title, showUrl, isCarousel, rows, products }) =>
 
     for (let i = 0; i < renderAmount; i += 1) {
       const product = products[i];
-      productElements.push(<Product key={uuid()} {...product} inverse={i % 2 === 0} />)
+      productElements.push(<Product key={uuid()} {...product} inverse={i % 2 === 0} accentColor={accentColor} />)
     }
 
     return (
@@ -55,6 +55,7 @@ const Category = ({ addPadding, title, showUrl, isCarousel, rows, products }) =>
 };
 
 Category.propTypes = {
+  accentColor: string,
   addPadding: bool,
   title: string.isRequired,
   showUrl: string,
@@ -64,6 +65,7 @@ Category.propTypes = {
 };
 
 Category.defaultProps = {
+  accentColor: '#512DA8',
   addPadding: false,
   showUrl: null,
   isCarousel: false,

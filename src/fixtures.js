@@ -184,16 +184,43 @@ export const fakeUser = {
   stylesheet: {
     bgColor: '#512DA8',
     bgImage: '',
-  }
+    accentColor: '#FF5722'
+  },
+  content: [
+    {
+      type: 'category',
+      title: 'Invierno 2018',
+      products
+    },
+    {
+      type: 'banner',
+      textView: {
+        text: 'dis is test my friend',
+        color: '#fff',
+        display: true
+      },
+      backgroundImage: 'https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-709620.jpg',
+      primary: {
+        text: 'Primary Button',
+        url: 'https://alpha.wallhaven.cc/wallpaper/709620',
+        display: true
+      },
+      secondary: {
+        text: 'Secondary Button',
+        url: 'https://alpha.wallhaven.cc/wallpaper/709620',
+        display: true
+      }
+    }
+  ]
 }
 
 export const colors = [
-  '#fff', // White
   '#000', // Black
   '#FF5252', // Red
   '#FF4081', // Pink
   '#E040FB', // Purple
   '#7C4DFF', // Deep Purple
+  '#512DA8', // MXN Purple
   '#536DFE', // Indigo
   '#448AFF', // Blue
   '#03A9F4', // Light Blue

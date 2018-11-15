@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { bool, number, string, shape } from 'prop-types';
 import styles from './Product.scss';
 
-const Product = ({ thumbnail, name, price, designer, inverse }) => (
+const Product = ({ thumbnail, name, price, designer, inverse, accentColor }) => (
   <div className={styles.container}>
     <img className={styles.thumbnail} src={thumbnail} alt={`Producto ${name} por ${designer.name}`} />
     <div className={inverse ? styles.curvedDivInverse : styles.curvedDiv} />
@@ -16,7 +16,7 @@ const Product = ({ thumbnail, name, price, designer, inverse }) => (
           {`por ${designer.name}`}
         </Link>
       </div>
-      <span className={styles.price}>
+      <span className={styles.price} style={{ color: accentColor }}>
         <p className={styles.sign}>
           $
         </p>
@@ -29,6 +29,7 @@ const Product = ({ thumbnail, name, price, designer, inverse }) => (
 );
 
 Product.propTypes = {
+  accentColor: string.isRequired,
   thumbnail: string.isRequired,
   name: string.isRequired,
   price: number.isRequired,
