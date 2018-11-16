@@ -112,7 +112,7 @@ const Settings = ({
         <p className={styles.subTitle}>
           Color de Fondo
         </p>
-        <ColorPicker selectedColor={stylesheet.bgColor} setStylesheet={setStylesheet} />
+        <ColorPicker selectedColor={stylesheet.bgColor} setStylesheet={setStylesheet} property="bgColor" />
         <div className={styles.imageSelect}>
           <p className={styles.subTitle}>
             Imagen de Perfil
@@ -157,7 +157,10 @@ const Settings = ({
         </label>
       </Section>
       <Section title="Contenido" display={display}>
-        content
+        <p className={styles.subTitle}>
+          Accent Color
+        </p>
+        <ColorPicker selectedColor={stylesheet.accentColor} setStylesheet={setStylesheet} property="accentColor" />
       </Section>
     </div>
   );

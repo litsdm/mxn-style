@@ -21,7 +21,7 @@ class SettingsSection extends Component {
           onClick={() => this.setState({ displayContent: !displayContent })}
         >
           {title}
-          <i className={`fa fa-angle-${displayContent ? 'up' : 'down'}`} />
+          <i className={`fa fa-angle-${displayContent ? 'down' : 'right'}`} />
         </button>
         {
           displayContent
