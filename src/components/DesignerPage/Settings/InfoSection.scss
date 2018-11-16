@@ -1,0 +1,32 @@
+@import '~@globalStyles';
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  margin-bottom: $u * 4;
+  opacity: 0.7;
+
+  input {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: $u;
+    font-size: 16px;
+    margin-top: $u * 2;
+    outline: none;
+    padding: 8px $u;
+    transition: 0.2s ease all;
+
+    &:focus {
+      border-color: $mxn-purple;
+    }
+  }
+}
+
+.select {
+  border: 1px solid #ddd;
+  font-size: 16px;
+  height: 32px;
+  margin-top: 6px;
+  outline: 0;
+}

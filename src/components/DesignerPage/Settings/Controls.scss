@@ -1,0 +1,65 @@
+@import '~@globalStyles';
+
+.controls {
+  display: flex;
+  position: absolute;
+  right: $u * 4;
+  top: $u * 4;
+}
+
+.posControlLeft,
+.posControlRight,
+.posControlDown {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: $u;
+  outline: none;
+  padding: 0;
+  transition: 0.2s ease all;
+
+  &.active {
+    color: #2196F3;
+  }
+
+  &:hover {
+    color: #2196F3;
+  }
+}
+
+.posControlLeft {
+  transform: rotate(-90deg);
+}
+
+.posControlRight {
+  transform: rotate(90deg);
+}
+
+.posControlDown {
+  transform: rotate(180deg);
+}
+
+.horizontalDivider {
+  background-color: #aaa;
+  height: $u * 4;
+  margin-left: $u;
+  margin-right: $u * 2;
+  width: 1px;
+}
+
+.close {
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.5;
+  outline: none;
+  padding: 4px 8px;
+  transition: 0.2s ease all;
+
+  &:hover {
+    background-color: rgba(96, 125, 139, 0.1);
+    opacity: 1;
+  }
+}

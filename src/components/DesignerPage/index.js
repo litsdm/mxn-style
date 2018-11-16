@@ -5,7 +5,7 @@ import styles from './styles.scss';
 
 import Header from './Header';
 import Content from './Content';
-import Settings from './Settings';
+import Settings from './Settings/index';
 
 const { userShape } = shapes;
 
