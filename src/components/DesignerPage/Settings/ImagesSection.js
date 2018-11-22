@@ -38,12 +38,12 @@ const ImagesSection = ({ display, stylesheet, handleFileChange, setStylesheet, p
         Recomendado: 1920 x 576. Ratio: 3.33
       </p>
     </div>
-    <p className={styles.subTitle}>
+    <p className={sharedStyles.subTitle}>
       Color de Fondo
     </p>
     <ColorPicker selectedColor={stylesheet.bgColor} setStylesheet={setStylesheet} property="bgColor" />
     <div className={styles.imageSelect}>
-      <p className={styles.subTitle}>
+      <p className={sharedStyles.subTitle}>
         Imagen de Perfil
       </p>
       <div>

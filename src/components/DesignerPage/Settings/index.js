@@ -20,7 +20,7 @@ const Settings = ({
   position,
   setState,
   display,
-  user: { stylesheet, profilePic, brandName, address },
+  user: { stylesheet, profilePic, brandName, address, content },
   setStylesheet,
   updateUser
 }) => {
@@ -68,6 +68,8 @@ const Settings = ({
         display={display}
         stylesheet={stylesheet}
         setStylesheet={setStylesheet}
+        content={content}
+        updateUser={updateUser}
       />
     </div>
   );

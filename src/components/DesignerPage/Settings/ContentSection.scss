@@ -1,0 +1,27 @@
+.dragList {
+  padding: 12px 0
+}
+
+.dragItem {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  outline: none;
+  padding: 12px;
+  margin-bottom: 12px;
+  user-select: none;
+
+  &.dragging {
+    background-color: lightGreen;
+  }
+}
+
+.cardTitle {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    text-transform: capitalize;
+  }
+}
