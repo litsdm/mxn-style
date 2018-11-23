@@ -22,7 +22,7 @@ class CategorySettings extends Component {
   }
 
   render() {
-    const { index, type, title } = this.props;
+    const { index, type, category: { title } } = this.props;
     const { display } = this.state;
     return (
       <Draggable draggableId={`dragity-drag-${index}`} index={index}>
@@ -34,6 +34,10 @@ class CategorySettings extends Component {
             className={`${styles.dragItem} ${snapshot.isDragging ? styles.dragging : ''}`}
             style={this.getItemStyle(provided.draggableProps.style)}
             id={`Category-item-${index}`}
+            onKeyPress={() => {}}
+            role="button"
+            tabIndex="0"
+            onClick={() => this.setState({ display: !display })}
           >
             <div className={styles.cardTitle}>
               <p>

@@ -1,0 +1,102 @@
+@import '~@globalStyles';
+
+.container {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 16;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: $u;
+  left: 50%;
+  min-width: $u * 60;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  z-index: 17;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 16;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $u * 4;
+}
+
+.title {
+  font-size: $u * 3;
+  font-weight: 600;
+}
+
+.close {
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.5;
+  outline: none;
+  padding: 4px 8px;
+  transition: 0.2s ease all;
+
+  &:hover {
+    background-color: rgba(96, 125, 139, 0.1);
+    opacity: 1;
+  }
+}
+
+.footer {
+  align-items: center;
+  background-color: #F7F7F9;
+  border-bottom-left-radius: $u;
+  border-bottom-right-radius: $u;
+  display: flex;
+  justify-content: flex-end;
+  padding: $u * 4;
+}
+
+.primary {
+  background-color: $mxn-purple;
+  border: none;
+  border-radius: $u;
+  color: #fff;
+  cursor: pointer;
+  font-size: $u * 3;
+  margin-left: $u * 2;
+  outline: none;
+  padding: $u $u * 3;
+  transition: 0.3s ease all;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: $u * 3;
+  opacity: 0.5;
+  outline: none;
+  padding: $u $u * 3;
+  transition: 0.3s ease all;
+
+  &:hover {
+    opacity: 1;
+  }
+}

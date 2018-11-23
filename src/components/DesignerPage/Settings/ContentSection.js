@@ -37,10 +37,10 @@ const ContentSection = ({ display, stylesheet, setStylesheet, content, updateUse
   }
 
   const renderContent = () =>
-    content.map(({ type, title }, index) =>
+    content.map(({ type, ...rest }, index) =>
       type === 'banner'
-        ? <Banner key={`CSKD-${index}`} index={index} type={type} />
-        : <Category key={`CSKD-${index}`} index={index} type={type} title={title} />
+        ? <Banner key={`CSKD-${index}`} index={index} type={type} banner={rest} />
+        : <Category key={`CSKD-${index}`} index={index} type={type} category={rest} />
     );
 
   return (

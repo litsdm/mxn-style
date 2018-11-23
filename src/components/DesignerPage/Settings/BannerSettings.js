@@ -1,62 +1,53 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import styles from './ContentSection.scss';
 
-class BannerSettings extends Component {
-   state = {
-     display: false
-   }
+const BannerSettings = ({ index, type }) => {
+  const getItemStyle = (draggableStyle) => {
+    const element = document.getElementById(`Banner-item-${index}`);
 
-   getItemStyle = (draggableStyle) => {
-     const { index } = this.props;
-     const element = document.getElementById(`Banner-item-${index}`);
+    if (!element) return;
 
-     if (!element) return;
+    const { top } = element.getBoundingClientRect();
 
-     const { top } = element.getBoundingClientRect();
+    return {
+      ...draggableStyle,
+      top: `${top}px !important`
+    }
+  }
 
-     return {
-       ...draggableStyle,
-       top: `${top}px !important`
-     }
-   }
+  const openModal = () => {
+    const element = document.getElementById(`bannerModal-${index}`);
+    if (!element) return;
 
+    element.style.display = 'block';
+  }
 
-   render() {
-     const { index, type } = this.props;
-     const { display } = this.state;
-
-     return (
-       <Draggable draggableId={`dragity-drag-${index}`} index={index}>
-         {(provided, snapshot) => (
-           <div
-             ref={provided.innerRef}
-             {...provided.draggableProps}
-             {...provided.dragHandleProps}
-             className={`${styles.dragItem} ${snapshot.isDragging ? styles.dragging : ''}`}
-             style={this.getItemStyle(provided.draggableProps.style)}
-             id={`Banner-item-${index}`}
-           >
-             <div className={styles.cardTitle}>
-               <p>
-                 {type}
-               </p>
-               <i className={`fa fa-angle-${display ? 'down' : 'right'}`} />
-             </div>
-             {
-               display
-                 ? (
-                   <div className={styles.content}>
-                     content
-                   </div>
-                 )
-                 : null
-             }
-           </div>
-         )}
-       </Draggable>
-     );
-   }
+  return (
+    <Draggable draggableId={`dragity-drag-${index}`} index={index}>
+      {(provided, snapshot) => (
+        <div
+          ref={provided.innerRef}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          className={`${styles.dragItem} ${snapshot.isDragging ? styles.dragging : ''}`}
+          style={getItemStyle(provided.draggableProps.style)}
+          id={`Banner-item-${index}`}
+          onKeyPress={() => {}}
+          role="button"
+          tabIndex="0"
+          onClick={openModal}
+        >
+          <div className={styles.cardTitle}>
+            <p>
+              {type}
+            </p>
+            <i className="fa fa-angle-right" />
+          </div>
+        </div>
+      )}
+    </Draggable>
+  );
 }
 
 export default BannerSettings;
