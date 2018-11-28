@@ -8,15 +8,16 @@ import Header from './Header';
 import Content from './Content';
 import Settings from './Settings/index';
 import BannerModal from './Settings/BannerModal';
+import CategoryModal from './Settings/CategoryModal';
 
 const { userShape } = shapes;
 
 const DesignerPage = ({ settingsPos, setState, displaySettings, user, setStylesheet, updateUser }) => {
   const renderContentModals = () =>
-    user.content.map(({ type }, index) =>
+    user.content.map(({ type, ...rest }, index) =>
       type === 'banner'
-        ? <BannerModal key={uuid()} id={`BM-${index}`} title="Configuracion de Banner" />
-        : null
+        ? <BannerModal key={uuid()} id={`BM-${index}`} title="Configuracion de Banner" {...rest} />
+        : <CategoryModal key={uuid()} id={`CM-${index}`} {...rest} />
     );
 
   return (

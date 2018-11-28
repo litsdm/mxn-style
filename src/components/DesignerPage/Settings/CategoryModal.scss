@@ -1,0 +1,76 @@
+@import '~@globalStyles';
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  opacity: 0.7;
+  padding: $u * 4;
+
+  input {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: $u;
+    font-size: 16px;
+    margin-top: $u * 2;
+    outline: none;
+    padding: 8px $u;
+    transition: 0.2s ease all;
+
+    &:focus {
+      border-color: $mxn-purple;
+    }
+  }
+}
+
+.products {
+  p {
+    font-weight: 600;
+    opacity: 0.7;
+    padding: $u * 4;
+    padding-top: 0;
+  }
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding: $u * 4;
+  padding-top: 0;
+}
+
+.primary {
+  background-color: $mxn-purple;
+  border: none;
+  border-radius: $u;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  padding: $u * 2 $u * 4;
+}
+
+.secondary {
+  background-color: transparent;
+  border: 1px solid $mxn-purple;
+  border-radius: $u;
+  color: $mxn-purple;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  padding: $u * 2 $u * 4;
+}
+
+.list {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.product {
+  margin: 0 $u * 2;
+  img {
+    height: 196px;
+    width: 180px;
+  }
+}

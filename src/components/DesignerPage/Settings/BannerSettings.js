@@ -17,7 +17,7 @@ const BannerSettings = ({ index, type }) => {
   }
 
   const openModal = () => {
-    const element = document.getElementById(`bannerModal-${index}`);
+    const element = document.getElementById(`BM-${index}`);
     if (!element) return;
 
     element.style.display = 'block';

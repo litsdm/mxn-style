@@ -1,14 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import styles from './ContentSection.scss';
 
-class CategorySettings extends Component {
-  state = {
-    display: false
-  }
-
-  getItemStyle = (draggableStyle) => {
-    const { index } = this.props;
+const CategorySettings = ({ index, type, category: { title } }) => {
+  const getItemStyle = (draggableStyle) => {
     const element = document.getElementById(`Category-item-${index}`);
 
     if (!element) return;
@@ -21,35 +16,38 @@ class CategorySettings extends Component {
     }
   }
 
-  render() {
-    const { index, type, category: { title } } = this.props;
-    const { display } = this.state;
-    return (
-      <Draggable draggableId={`dragity-drag-${index}`} index={index}>
-        {(provided, snapshot) => (
-          <div
-            ref={provided.innerRef}
-            {...provided.draggableProps}
-            {...provided.dragHandleProps}
-            className={`${styles.dragItem} ${snapshot.isDragging ? styles.dragging : ''}`}
-            style={this.getItemStyle(provided.draggableProps.style)}
-            id={`Category-item-${index}`}
-            onKeyPress={() => {}}
-            role="button"
-            tabIndex="0"
-            onClick={() => this.setState({ display: !display })}
-          >
-            <div className={styles.cardTitle}>
-              <p>
-                {`${type}: ${title}`}
-              </p>
-              <i className={`fa fa-angle-${display ? 'down' : 'right'}`} />
-            </div>
-          </div>
-        )}
-      </Draggable>
-    );
+  const openModal = () => {
+    const element = document.getElementById(`CM-${index}`);
+    if (!element) return;
+
+    element.style.display = 'block';
   }
+
+  return (
+    <Draggable draggableId={`dragity-drag-${index}`} index={index}>
+      {(provided, snapshot) => (
+        <div
+          ref={provided.innerRef}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          className={`${styles.dragItem} ${snapshot.isDragging ? styles.dragging : ''}`}
+          style={getItemStyle(provided.draggableProps.style)}
+          id={`Category-item-${index}`}
+          onKeyPress={() => {}}
+          role="button"
+          tabIndex="0"
+          onClick={openModal}
+        >
+          <div className={styles.cardTitle}>
+            <p>
+              {`${type}: ${title}`}
+            </p>
+            <i className="fa fa-angle-right" />
+          </div>
+        </div>
+      )}
+    </Draggable>
+  );
 }
 
 export default CategorySettings;
