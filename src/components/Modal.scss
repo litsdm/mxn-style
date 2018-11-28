@@ -15,6 +15,8 @@
   border-radius: $u;
   left: 50%;
   width: $u * 120;
+  max-height: $u * 100;
+  overflow-y: scroll;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
