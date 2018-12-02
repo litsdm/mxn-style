@@ -53,8 +53,8 @@ class BannerModal extends Component {
 
   render() {
     const { content } = this.state;
-    const { id, index } = this.props;
-    const { title, textView, primary, secondary, backgroundImage } = content[index];
+    const { id, index, title } = this.props;
+    const { textView, primary, secondary, backgroundImage } = content[index];
 
     return (
       <Modal id={id} title={title}>
@@ -162,30 +162,14 @@ class BannerModal extends Component {
 
 BannerModal.propTypes = {
   id: string.isRequired,
-  /* title: string,
-  backgroundImage: string.isRequired,
-  textView: shape({
-    text: string,
-    color: string,
-    display: bool
-  }).isRequired,
-  primary: shape({
-    display: bool,
-    text: string,
-    url: string
-  }).isRequired,
-  secondary: shape({
-    display: bool,
-    text: string,
-    url: string
-  }).isRequired, */
+  title: string,
   updateUser: func.isRequired,
   user: userShape,
   index: number.isRequired
 };
 
 BannerModal.defaultProps = {
-  // title: '',
+  title: '',
   user: {}
 };
 

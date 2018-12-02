@@ -14,7 +14,7 @@ const { userShape } = shapes;
 
 const DesignerPage = ({ settingsPos, setState, displaySettings, user, setStylesheet, updateUser }) => {
   const renderContentModals = () =>
-    user.content.map(({ type, ...rest }, index) =>
+    user.content.map(({ type }, index) =>
       type === 'banner'
       ? (
         <BannerModal
@@ -24,7 +24,6 @@ const DesignerPage = ({ settingsPos, setState, displaySettings, user, setStylesh
           updateUser={updateUser}
           user={user}
           index={index}
-          {...rest}
         />
       )
       : (
@@ -34,7 +33,6 @@ const DesignerPage = ({ settingsPos, setState, displaySettings, user, setStylesh
           updateUser={updateUser}
           user={user}
           index={index}
-          {...rest}
         />
       )
     );

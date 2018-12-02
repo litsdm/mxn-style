@@ -1,57 +1,111 @@
-import React from 'react';
-import { arrayOf, string } from 'prop-types';
+import React, { Component } from 'react';
+import { func, number, string } from 'prop-types';
 import shapes from '@shapes';
 
 import Modal from '@components/Modal';
 
 import styles from './CategoryModal.scss';
 
-const { productShape } = shapes;
+const { userShape } = shapes;
 
-const CategoryModal = ({ id, title, products }) => {
-  const renderProducts = () => products.map(({ name, thumbnail }) => (
-    <div className={styles.product}>
-      <img src={thumbnail} alt={`${name} product thumbnail`} />
-      <p>{name}</p>
-    </div>
-  ))
+class CategoryModal extends Component {
+  state = {
+    content: this.props.user.content // eslint-disable-line react/destructuring-assignment
+  }
 
-  return (
-    <Modal id={id} title={title}>
-      <div className={styles.content}>
-        <label htmlFor="categoryTitleInput" className={styles.inputContainer}>
-          Nombre de la Categoria
-          <input id="categoryTitleInput" type="text" name="title" value={title} />
-        </label>
-        <div className={styles.products}>
-          <p>
-            Productos
-          </p>
-          <div className={styles.controls}>
-            <button type="button" className={styles.primary}>
-              Crear Producto
-            </button>
-            <button type="button" className={styles.secondary}>
-              Agregar Producto
-            </button>
-          </div>
-          <div className={styles.list}>
-            {renderProducts()}
+  handleChange = ({ target: { name, value } }) => {
+    const { content } = this.state;
+    const { index } = this.props;
+
+    const newCategory = {
+        ...content[index],
+        [name]: value
+      };
+
+    const newContent = [
+      ...content.slice(0, index),
+      newCategory,
+      ...content.slice(index + 1)
+    ];
+
+    this.setState({ content: newContent });
+  }
+
+  renderProducts = () => {
+    const { content } = this.state;
+    const { index } = this.props;
+    const { products } = content[index];
+
+    return products.map(({ name, thumbnail }) => (
+      <div className={styles.product}>
+        <img src={thumbnail} alt={`${name} product thumbnail`} />
+        <p>{name}</p>
+      </div>
+    ))
+  }
+
+  handleSave = () => {
+    const { content } = this.state;
+    const { updateUser } = this.props;
+    updateUser({ content });
+  }
+
+  handleCancel = () => {
+    const { id } = this.props;
+    document.getElementById(id).style.display = 'none';
+  }
+
+  render() {
+    const { content } = this.state;
+    const { id, index } = this.props;
+    const { title } = content[index];
+
+    return (
+      <Modal id={id} title={title}>
+        <div className={styles.content}>
+          <label htmlFor="categoryTitleInput" className={styles.inputContainer}>
+            Nombre de la Categoria
+            <input id="categoryTitleInput" type="text" name="title" value={title} onChange={this.handleChange} />
+          </label>
+          <div className={styles.products}>
+            <p>
+              Productos
+            </p>
+            <div className={styles.controls}>
+              <button type="button" className={styles.primary}>
+                Crear Producto
+              </button>
+              <button type="button" className={styles.secondary}>
+                Agregar Producto
+              </button>
+            </div>
+            <div className={styles.list}>
+              {this.renderProducts()}
+            </div>
           </div>
         </div>
-      </div>
-    </Modal>
-  );
-};
+        <div className={styles.footer}>
+          <button type="button" className={styles.cancel} onClick={this.handleCancel}>
+            Cancelar
+          </button>
+          <button type="button" className={styles.save} onClick={this.handleSave}>
+            Guardar
+          </button>
+        </div>
+      </Modal>
+    );
+  }
+}
 
 CategoryModal.propTypes = {
   id: string.isRequired,
-  title: string,
-  products: arrayOf(productShape).isRequired
+  updateUser: func.isRequired,
+  user: userShape,
+  index: number.isRequired
 };
 
 CategoryModal.defaultProps = {
-  title: ''
+  user: {}
 };
 
 export default CategoryModal;
