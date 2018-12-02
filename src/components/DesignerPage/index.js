@@ -16,8 +16,27 @@ const DesignerPage = ({ settingsPos, setState, displaySettings, user, setStylesh
   const renderContentModals = () =>
     user.content.map(({ type, ...rest }, index) =>
       type === 'banner'
-        ? <BannerModal key={uuid()} id={`BM-${index}`} title="Configuracion de Banner" {...rest} />
-        : <CategoryModal key={uuid()} id={`CM-${index}`} {...rest} />
+      ? (
+        <BannerModal
+          key={uuid()}
+          id={`BM-${index}`}
+          title="Configuracion de Banner"
+          updateUser={updateUser}
+          user={user}
+          index={index}
+          {...rest}
+        />
+      )
+      : (
+        <CategoryModal
+          key={uuid()}
+          id={`CM-${index}`}
+          updateUser={updateUser}
+          user={user}
+          index={index}
+          {...rest}
+        />
+      )
     );
 
   return (

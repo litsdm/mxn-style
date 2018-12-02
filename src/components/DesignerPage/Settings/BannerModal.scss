@@ -1,6 +1,7 @@
 @import '~@globalStyles';
 
 .content {
+  background-color: #FCFCFD;
   padding-bottom: $u * 4;
 }
 
@@ -88,4 +89,39 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: $u * 4;
+}
+
+.footer {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  padding: $u * 2 $u * 4;
+}
+
+.save {
+  background-color: $mxn-purple;
+  border: none;
+  border-radius: $u;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+  padding: $u * 2 $u * 4;
+}
+
+.cancel {
+  background-color: transparent;
+  border: none;
+  border-radius: $u;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: $u * 2;
+  opacity: 0.6;
+  outline: none;
+  padding: $u * 2 $u * 4;
+
+  &:hover {
+    opacity: 1;
+  }
 }
