@@ -8,11 +8,13 @@ const BannerSettings = ({ index, type }) => {
 
     if (!element) return;
 
-    const { top } = element.getBoundingClientRect();
+    const { top, left, right } = element.getBoundingClientRect();
 
     return {
       ...draggableStyle,
-      top: `${top}px !important`
+      top: `${top}px !important`,
+      left: `${left}px !important`,
+      right: `${right}px !important`
     }
   }
 
