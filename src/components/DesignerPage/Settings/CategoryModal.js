@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'uuid/v4';
 import { func, number, string } from 'prop-types';
 import shapes from '@shapes';
 
@@ -37,7 +38,7 @@ class CategoryModal extends Component {
     const { products } = content[index];
 
     return products.map(({ name, thumbnail }) => (
-      <div className={styles.product}>
+      <div className={styles.product} key={uuid()}>
         <img src={thumbnail} alt={`${name} product thumbnail`} />
         <p>{name}</p>
       </div>
@@ -51,7 +52,8 @@ class CategoryModal extends Component {
   }
 
   handleCancel = () => {
-    const { id } = this.props;
+    const { id, user: { content } } = this.props;
+    this.setState({ content });
     document.getElementById(id).style.display = 'none';
   }
 
