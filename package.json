@@ -67,6 +67,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.1.0",
+    "toastr": "^2.1.4",
     "url-loader": "1.1.1",
     "webpack": "4.19.1",
     "webpack-dev-server": "3.1.9",
@@ -78,6 +79,7 @@
     "start": "concurrently \"npm run dev-server\" \"npm run start-client\"",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "start-server": "babel-node server/ --presets @babel/env --plugins @babel/plugin-transform-destructuring",
     "dev-server": "nodemon -w server/ --exec \"babel-node server/ --presets @babel/env --plugins @babel/plugin-transform-destructuring\""
   },
   "eslintConfig": {
