@@ -11,21 +11,13 @@ const { userShape } = shapes;
 
 const Content = ({ user }) => {
   const renderContent = () =>
-    user.content.map(({ type, products, title, textView, backgroundImage, primary, secondary }) => {
+    user.content.map(({ type, ...rest }) => {
       const { accentColor } = user.stylesheet;
       if (type === 'category')
-        return <Category key={uuid()} addPadding title={title} products={products} accentColor={accentColor} />
+        return <Category key={uuid()} addPadding {...rest} accentColor={accentColor} />
 
       return (
-        <Banner
-          key={uuid()}
-          textView={textView}
-          backgroundImage={backgroundImage}
-          substractMargin={48}
-          accentColor={accentColor}
-          primary={primary}
-          secondary={secondary}
-        />
+        <Banner key={uuid()} accentColor={accentColor} {...rest} />
       )
     })
 

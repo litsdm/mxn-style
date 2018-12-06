@@ -10,12 +10,42 @@ import Product from './Product';
 const { productShape } = shapes;
 
 const PRODUCTS_PER_ROW = 4;
+const HORIZONTAL_LIST_ID = uuid();
 
 const Category = ({ addPadding, title, showUrl, isCarousel, rows, products, accentColor }) => {
   const maxItems = rows * PRODUCTS_PER_ROW;
 
-  const renderCarousel = () => {
+  const handleScroll = (direction) => () => {
+    const element = document.getElementById(HORIZONTAL_LIST_ID);
+    const scrollPixels = 252;
 
+    if (!element) return;
+
+    console.log(element.scrollLeft);
+    if (direction === 'right') element.scrollLeft += scrollPixels;
+    else element.scrollLeft -= scrollPixels;
+  }
+
+  const renderCarousel = () => {
+    const productElements = products.map((product, index) => (
+      <div key={uuid()} className={styles.productWrapper} style={index === 0 ? { marginLeft: '48px' } : {}}>
+        <Product {...product} inverse={index % 2 === 0} accentColor={accentColor} />
+      </div>
+    ));
+
+    return (
+      <div className={styles.carousel}>
+        <button type="button" className={styles.rightButton} onClick={handleScroll('right')}>
+          <i className="fa fa-angle-right" />
+        </button>
+        <button type="button" className={styles.leftButton} onClick={handleScroll('left')}>
+          <i className="fa fa-angle-left" />
+        </button>
+        <div className={styles.horizontalList} id={HORIZONTAL_LIST_ID}>
+          {productElements}
+        </div>
+      </div>
+    )
   }
 
   const renderDefault = () => {
@@ -28,15 +58,15 @@ const Category = ({ addPadding, title, showUrl, isCarousel, rows, products, acce
     }
 
     return (
-      <div className={styles.default}>
+      <div className={styles.default} style={addPadding ? { padding: '0 48px' } : {}}>
         {productElements}
       </div>
     );
   }
 
   return (
-    <div className={styles.container} style={addPadding ? { padding: '0 48px' } : {}}>
-      <Link to={showUrl || '#'} className={styles.showAll} style={showUrl ? { cursor: 'default' } : {}}>
+    <div className={styles.container}>
+      <Link to={showUrl || '#'} className={styles.showAll} style={addPadding ? { padding: '0 48px' } : {}}>
         <p className={styles.title}>
           {title}
         </p>

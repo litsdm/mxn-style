@@ -2,7 +2,7 @@
 
 .container {
   margin-bottom: $u * 8;
-  
+
   &:hover * .expand {
     opacity: 0.7;
     margin-left: $u;
@@ -48,4 +48,49 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+}
+
+.horizontalList {
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: $u * 4;
+}
+
+.rightButton,
+.leftButton {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  bottom: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  font-size: $u * 4;
+  opacity: 0.8;
+  outline: none;
+  padding: $u * 2 20px;
+  position: absolute;
+  transform: translate(0, -50%);
+  transition: 0.3s ease all;
+  z-index: 1;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.rightButton {
+  right: $u * 2;
+}
+
+.leftButton {
+  left: $u * 2;
+}
+
+.productWrapper {
+  margin-right: $u * 4;
 }

@@ -34,6 +34,42 @@ export const products = [
       name: 'Mexican Style',
       _id: '1234'
     }
+  },
+  {
+    name: 'Aretes Bombon',
+    thumbnail: 'https://thumb.ibb.co/iOpBqf/d9fdc8f8-f717-4489-8e5f-7701acb3cf7a.jpg',
+    price: 250,
+    designer: {
+      name: 'Mexican Style',
+      _id: '1234'
+    }
+  },
+  {
+    name: 'Aretes Bombon',
+    thumbnail: 'https://thumb.ibb.co/iOpBqf/d9fdc8f8-f717-4489-8e5f-7701acb3cf7a.jpg',
+    price: 250,
+    designer: {
+      name: 'Mexican Style',
+      _id: '1234'
+    }
+  },
+  {
+    name: 'Aretes Bombon',
+    thumbnail: 'https://thumb.ibb.co/iOpBqf/d9fdc8f8-f717-4489-8e5f-7701acb3cf7a.jpg',
+    price: 250,
+    designer: {
+      name: 'Mexican Style',
+      _id: '1234'
+    }
+  },
+  {
+    name: 'Aretes Bombon',
+    thumbnail: 'https://thumb.ibb.co/iOpBqf/d9fdc8f8-f717-4489-8e5f-7701acb3cf7a.jpg',
+    price: 250,
+    designer: {
+      name: 'Mexican Style',
+      _id: '1234'
+    }
   }
 ]
 
@@ -189,6 +225,7 @@ export const fakeUser = {
   content: [
     {
       type: 'category',
+      isCarousel: true,
       title: 'Invierno 2018',
       products
     },
