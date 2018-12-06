@@ -88,7 +88,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "start-heroku": "npm run build && npm run start-server",
-    "start-server": "babel-node server/ --presets @babel/env --plugins @babel/plugin-transform-destructuring,@babel/plugin-proposal-class-properties",
+    "start-server": "babel-node server/ --presets @babel/env --plugins @babel/plugin-transform-destructuring",
     "dev-server": "nodemon -w server/ --exec \"babel-node server/ --presets @babel/env --plugins @babel/plugin-transform-destructuring\""
   },
   "eslintConfig": {
@@ -147,7 +147,9 @@
     "env": {
       "production": {
         "plugins": [
-          "dev-expression"
+          "dev-expression",
+          "@babel/plugin-proposal-class-properties",
+          "@babel/plugin-transform-classes"
         ]
       },
       "development": {
