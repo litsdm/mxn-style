@@ -212,6 +212,7 @@ module.exports = {
       '@actions': path.resolve(__dirname, '../src/actions'),
       '@components': path.resolve(__dirname, '../src/components'),
       '@containers': path.resolve(__dirname, '../src/containers'),
+      '@fixtures': path.resolve(__dirname, '../src/fixtures.js'),
       '@globalStyles': path.resolve(__dirname, '../src/styles/globals.scss'),
       '@helpers': path.resolve(__dirname, '../src/helpers'),
       '@shapes': path.resolve(__dirname, '../src/shapes'),
