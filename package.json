@@ -7,6 +7,7 @@
     "@babel/cli": "^7.2.0",
     "@babel/core": "7.1.0",
     "@babel/node": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
     "@babel/plugin-transform-destructuring": "^7.2.0",
     "@babel/preset-env": "^7.1.0",
     "@fortawesome/fontawesome-free": "^5.4.0",
@@ -87,7 +88,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "start-heroku": "npm run build && npm run start-server",
-    "start-server": "babel-node server/ --presets @babel/env --plugins @babel/plugin-transform-destructuring",
+    "start-server": "babel-node server/ --presets @babel/env --plugins @babel/plugin-transform-destructuring,@babel/plugin-proposal-class-properties",
     "dev-server": "nodemon -w server/ --exec \"babel-node server/ --presets @babel/env --plugins @babel/plugin-transform-destructuring\""
   },
   "eslintConfig": {
