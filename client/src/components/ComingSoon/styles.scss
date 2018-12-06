@@ -1,0 +1,99 @@
+@import '~styles/globals.scss';
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.container:after {
+  background-color: #F9F9FB;
+  background-image: url("https://s3-us-west-1.amazonaws.com/mxnstyle-bucket/authBgTest.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  display: block;
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.brandName {
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+.label {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #EAEDF3;
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: text;
+  flex-direction: column;
+  font-size: 14px;
+  padding: 12px 24px;
+  padding-bottom: 6px;
+  width: 300px;
+
+  input {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    padding: 6px 0px;
+    width: 100%;
+  }
+
+  &:focus-within {
+    border-left: 1px solid $red;
+  }
+}
+
+.subscribeWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe {
+  background-color: #FF5252;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 12px;
+  outline: none;
+  padding: 12px 18px;
+}
+
+.text {
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.subText {
+  margin: 12px 0;
+  max-width: 480px;
+  text-align: center;
+}
+
+.incentive {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 12px 0;
+  max-width: 480px;
+  text-align: center;
+}
+
+.soon {
+  font-size: 66px;
+  margin-top: 66px;
+}
