@@ -7,6 +7,18 @@ const ComingSoon = ({ email, handleChange, subscribe }) => (
     <p className={styles.brandName}>
       Mexican Style
     </p>
+    <p className={styles.text}>
+      ¡Que emoción que llegaras hasta aquí!
+    </p>
+    <p className={styles.subText}>
+      ¡Aun estamos en construcción de la plataforma, pero dentro de muy muy poco si eres diseñador o comprador compulsivo tendremos grandes noticias para ti!
+    </p>
+    <p className={styles.subText}>
+      Muy pronto podrás comprar todo tu closet en un solo lugar llevando a todo México en la piel
+    </p>
+    <p className={styles.incentive}>
+      Sí ya no puedes mas de la emoción y quieres ser uno de los primeros en enterarse cuando estemos en línea deja tu correo aquí. Porque lo mexicano esta BIEN hecho
+    </p>
     <div className={styles.subscribeWrapper}>
       <label htmlFor="comingSoonInput" className={styles.label}>
         Email

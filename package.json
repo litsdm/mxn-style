@@ -82,6 +82,7 @@
     "start": "concurrently \"npm run dev-server\" \"npm run start-client\"",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "start-heroku": "npm run build && npm run start-server",
     "start-server": "babel-node server/ --presets @babel/env --plugins @babel/plugin-transform-destructuring",
     "dev-server": "nodemon -w server/ --exec \"babel-node server/ --presets @babel/env --plugins @babel/plugin-transform-destructuring\""
   },
