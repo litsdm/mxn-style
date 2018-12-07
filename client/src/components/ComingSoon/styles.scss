@@ -83,6 +83,10 @@
   margin: 12px 0;
   max-width: 480px;
   text-align: center;
+
+  @include media($small) {
+    padding: 0 24px;
+  }
 }
 
 .incentive {
@@ -91,9 +95,17 @@
   margin: 12px 0;
   max-width: 480px;
   text-align: center;
+
+  @include media($small) {
+    padding: 0 24px;
+  }
 }
 
 .soon {
   font-size: 66px;
   margin-top: 66px;
+
+  @include media($small) {
+    font-size: 54px;
+  }
 }
