@@ -1,7 +1,7 @@
 import React from 'react';
 import { func, number, string } from 'prop-types';
 import shapes from 'shapes';
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 import ProgressCircles from './ProgressCircles';
 import DesignerForm from './DesignerForm';

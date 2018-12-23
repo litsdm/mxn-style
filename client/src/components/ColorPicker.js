@@ -1,7 +1,7 @@
 import React from 'react';
 import uuid from 'uuid/v4';
 import { func, string } from 'prop-types';
-import styles from './ColorPicker.scss';
+import styles from './ColorPicker.module.scss';
 
 import { colors } from 'fixtures';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import styles from './Header.scss';
+import styles from './Header.module.scss';
 
 import TopBar from '../TopBar';
 

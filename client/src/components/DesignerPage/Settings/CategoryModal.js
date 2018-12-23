@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import uuid from 'uuid/v4';
 import { func, number, string } from 'prop-types';
 import shapes from 'shapes';
+import styles from './CategoryModal.module.scss';
 
-import Modal from '@components/Modal';
-
-import styles from './CategoryModal.scss';
+import Modal from 'components/Modal';
 
 const { userShape } = shapes;
 

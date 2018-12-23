@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { bool, number, string, shape } from 'prop-types';
-import styles from './Product.scss';
+import styles from './Product.module.scss';
 
 const Product = ({ thumbnail, name, price, designer, inverse, accentColor }) => (
   <div className={styles.container}>

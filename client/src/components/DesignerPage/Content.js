@@ -1,7 +1,7 @@
 import React from 'react';
 import uuid from 'uuid/v4';
 import shapes from 'shapes';
-import styles from './Content.scss';
+import styles from './Content.module.scss';
 
 import DesignerCard from './DesignerCard';
 import Category from '../Category';

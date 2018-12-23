@@ -2,7 +2,7 @@ import React from 'react';
 import uuid from 'uuid/v4';
 import { bool, func, string } from 'prop-types';
 import shapes from 'shapes';
-import styles from './InfoSection.scss';
+import styles from './InfoSection.module.scss';
 
 import Section from './SettingsSection';
 

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import toastr from 'toastr';
 
-import callApi from '../helpers/apiCaller';
+import callApi from 'helpers/apiCaller';
 
-import ComingSoon from '../components/ComingSoon';
+import ComingSoon from 'components/ComingSoon';
 
 class ComingSoonPage extends Component {
   state = {

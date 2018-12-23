@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './LastStep.scss';
+import styles from './LastStep.module.scss';
 
 const LastStep = () => (
   <div className={styles.container}>

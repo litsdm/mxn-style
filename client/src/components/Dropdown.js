@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import uuid from 'uuid/v4';
 import { string } from 'prop-types';
 import shapes from 'shapes';
-import styles from './Dropdown.scss';
+import styles from './Dropdown.module.scss';
 
 const { dropdownDataShape, childrenShape } = shapes;
 

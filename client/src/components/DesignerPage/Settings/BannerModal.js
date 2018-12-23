@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { func, number, string } from 'prop-types';
 import shapes from 'shapes';
+import styles from './BannerModal.module.scss';
 
 import Modal from 'components/Modal';
-
-import styles from './BannerModal.scss';
 
 const { userShape } = shapes;
 

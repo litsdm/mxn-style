@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 import shapes from 'shapes';
-import styles from './Modal.scss';
+import styles from './Modal.module.scss';
 
 const { childrenShape } = shapes;
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { string } from 'prop-types';
 import shapes from 'shapes';
-import styles from './DropdownContainer.scss';
+import styles from './DropdownContainer.module.scss';
 
 import Dropdown from './Dropdown';
 

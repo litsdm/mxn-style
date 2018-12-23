@@ -1,6 +1,6 @@
 import React from 'react';
 import { number } from 'prop-types';
-import styles from './ProgressCircles.scss';
+import styles from './ProgressCircles.module.scss';
 
 const ProgressCircles = ({ progress }) => {
   const getCircleClass = (index) => {

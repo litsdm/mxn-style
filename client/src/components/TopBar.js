@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { bool } from 'prop-types';
-import styles from './TopBar.scss';
+import styles from './TopBar.module.scss';
 
 import DropdownContainer from './DropdownContainer';
 

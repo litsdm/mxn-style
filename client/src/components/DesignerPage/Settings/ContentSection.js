@@ -3,7 +3,7 @@ import React from 'react';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import { array, bool, func } from 'prop-types';
 import shapes from 'shapes';
-import styles from './ContentSection.scss';
+import styles from './ContentSection.module.scss';
 import sharedStyles from './styles.scss';
 
 import Section from './SettingsSection';

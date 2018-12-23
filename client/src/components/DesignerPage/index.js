@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import uuid from 'uuid/v4';
 import { bool, func, string } from 'prop-types';
 import shapes from 'shapes';
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 import Header from './Header';
 import Content from './Content';

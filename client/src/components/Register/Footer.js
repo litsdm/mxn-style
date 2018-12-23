@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, number } from 'prop-types';
-import styles from './Footer.scss';
+import styles from './Footer.module.scss';
 
 const Footer = ({ page, handleNext, handleBack, goToPage }) => {
   const nextPage = () => goToPage(page + 1);

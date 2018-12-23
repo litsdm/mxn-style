@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Content.scss';
+import styles from './Content.module.scss';
 
 import Category from '../Category';
 import { products } from 'fixtures';

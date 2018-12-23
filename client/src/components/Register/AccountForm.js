@@ -1,7 +1,7 @@
 import React from 'react';
 import { func, string } from 'prop-types';
 import shapes from 'shapes';
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 import Footer from './Footer';
 

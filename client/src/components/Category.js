@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import uuid from 'uuid/v4';
 import { arrayOf, bool, number, string } from 'prop-types';
 import shapes from 'shapes';
-import styles from './Category.scss';
+import styles from './Category.module.scss';
 
 import Product from './Product';
 

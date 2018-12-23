@@ -1,6 +1,6 @@
 import React from 'react';
 import shapes from 'shapes';
-import styles from './DesignerCard.scss';
+import styles from './DesignerCard.module.scss';
 
 const { userShape } = shapes;
 

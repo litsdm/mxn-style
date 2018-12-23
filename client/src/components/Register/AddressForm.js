@@ -2,8 +2,8 @@ import React from 'react';
 import uuid from 'uuid/v4';
 import { func } from 'prop-types';
 import shapes from 'shapes';
-import sharedStyles from './styles.scss';
-import styles from './AddressForm.scss';
+import sharedStyles from './styles.module.scss';
+import styles from './AddressForm.module.scss';
 
 import Footer from './Footer';
 

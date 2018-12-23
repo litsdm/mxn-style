@@ -1,6 +1,6 @@
 import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import styles from './ContentSection.scss';
+import styles from './ContentSection.module.scss';
 
 const CategorySettings = ({ index, type, category: { title } }) => {
   const getItemStyle = (draggableStyle) => {

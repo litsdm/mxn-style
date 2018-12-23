@@ -1,7 +1,7 @@
 import React from 'react';
 import { bool, func, string } from 'prop-types';
 import shapes from 'shapes';
-import styles from './ImagesSection.scss';
+import styles from './ImagesSection.module.scss';
 import sharedStyles from './styles.scss';
 
 import Section from './SettingsSection';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bool, string } from 'prop-types';
 import shapes from 'shapes';
-import styles from './SettingsSection.scss';
+import styles from './SettingsSection.module.scss';
 
 const { childrenShape } = shapes;
 

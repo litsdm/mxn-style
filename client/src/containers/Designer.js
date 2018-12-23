@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { func } from 'prop-types';
 import shapes from 'shapes';
 
-import { updateUser } from '@actions/user';
+import { updateUser } from 'actions/user';
 
-import DesignerComponent from '@components/DesignerPage';
+import DesignerComponent from 'components/DesignerPage';
 
 const { userShape } = shapes;
 

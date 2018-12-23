@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool, string, shape } from 'prop-types';
-import styles from './Banner.scss';
+import styles from './Banner.module.scss';
 
 const Banner = ({ textView, primary, secondary, accentColor, backgroundImage }) => (
   <div

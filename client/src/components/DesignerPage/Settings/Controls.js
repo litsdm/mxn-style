@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, string } from 'prop-types';
-import styles from './Controls.scss';
+import styles from './Controls.module.scss';
 
 const Controls = ({ position, setState }) => (
   <div className={styles.controls}>
