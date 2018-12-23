@@ -11,7 +11,7 @@ import ComingSoon from './containers/ComingSoon';
 const Routes = () => (
   <App>
     <Switch>
-      <Route path="/" component={ComingSoon} />
+      <Route exact path="/" component={ComingSoon} />
       <Route path="/home" component={Home} />
       <Route path="/register" component={Register} />
       <Route path="/:slug" component={Designer} />

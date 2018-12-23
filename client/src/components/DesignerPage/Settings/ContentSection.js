@@ -4,7 +4,7 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import { array, bool, func } from 'prop-types';
 import shapes from 'shapes';
 import styles from './ContentSection.module.scss';
-import sharedStyles from './styles.scss';
+import sharedStyles from './styles.module.scss';
 
 import Section from './SettingsSection';
 import ColorPicker from '../../ColorPicker';

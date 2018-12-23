@@ -17,13 +17,20 @@ const Category = ({ addPadding, title, showUrl, isCarousel, rows, products, acce
 
   const handleScroll = (direction) => () => {
     const element = document.getElementById(HORIZONTAL_LIST_ID);
-    const scrollPixels = 252;
+    const distance = 252 * 5;
+    const step = 100;
+    let scrollAmount = 0;
 
     if (!element) return;
 
-    console.log(element.scrollLeft);
-    if (direction === 'right') element.scrollLeft += scrollPixels;
-    else element.scrollLeft -= scrollPixels;
+    const slideTimer = setInterval(() => {
+      if (direction === 'right') element.scrollLeft += step;
+      else element.scrollLeft -= step;
+      scrollAmount += step;
+      if(scrollAmount >= distance){
+        window.clearInterval(slideTimer);
+      }
+    }, 20);
   }
 
   const renderCarousel = () => {
