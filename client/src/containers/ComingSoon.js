@@ -29,9 +29,13 @@ class ComingSoonPage extends Component {
       .catch(err => toastr.error(err.message));
   }
 
+  openModal = () => {
+    document.getElementById('choosePlanModal').style.display = 'block';
+  }
+
   render() {
     const { email } = this.state;
-    return <ComingSoon email={email} handleChange={this.handleChange} subscribe={this.handleSubscribe} />
+    return <ComingSoon email={email} handleChange={this.handleChange} subscribe={this.openModal} />
   }
 }
 

@@ -1,0 +1,94 @@
+@import '~styles/globals.scss';
+
+.plans {
+  background-color: #F9F9FB;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card,
+.secondaryCard {
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 25%;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  flex: 1 1 30%;
+  z-index: 2;
+}
+
+.point {
+  display: flex;
+  margin-bottom: 12px;
+
+  i {
+    color: #3EAB92;
+    margin-right: 12px;
+  }
+
+  p {
+    color: #667682;
+
+    b {
+      color: #3F4852;
+    }
+  }
+}
+
+.note {
+  color: #667682;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.choosePlan {
+  align-items: center;
+  background-color: $mxn-purple;
+  border: none;
+  border-radius: 6px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.875em;
+  height: 50px;
+  outline: none;
+  padding: 0 24px;
+
+  &:disabled {
+    background-color: #BABCBF;
+  }
+}
+
+.divider {
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 30px;
+  margin: 0 12px;
+  width: 1px;
+}
+
+.price {
+  font-weight: bold;
+
+  span {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+.pointNote {
+  font-size: 12px;
+  margin-bottom: 18px;
+  opacity: 0.5;
+  text-align: center;
+}

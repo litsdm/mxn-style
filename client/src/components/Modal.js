@@ -5,7 +5,7 @@ import styles from './Modal.module.scss';
 
 const { childrenShape } = shapes;
 
-const Modal = ({ id, children, title }) => {
+const Modal = ({ id, children, title, modalStyle }) => {
   const closeModal = () => {
     const element = document.getElementById(id);
     if (!element) return;
@@ -21,7 +21,7 @@ const Modal = ({ id, children, title }) => {
         role="button"
         tabIndex="0"
       />
-      <div className={styles.modal}>
+      <div className={styles.modal} style={modalStyle}>
         <div className={styles.header}>
           <p className={styles.title}>
             {title}
