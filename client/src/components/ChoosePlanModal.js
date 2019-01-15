@@ -3,7 +3,7 @@ import styles from './ChoosePlanModal.module.scss';
 
 import Modal from './Modal';
 
-const ChoosePlanModal = () => (
+const ChoosePlanModal = ({ selectPlan }) => (
   <Modal id="choosePlanModal" title="Escoge tu Plan" modalStyle={{ width: '100%', maxHeight: 'none', height: '100%', borderRadius: '0' }}>
     <div className={styles.plans}>
       <div className={styles.secondaryCard}>
@@ -36,7 +36,7 @@ const ChoosePlanModal = () => (
         <p className={styles.note}>
           Este plan es perfecto para ti si empezando con tu marca y no cuentas con un sistema de mayoreo.
         </p>
-        <button className={styles.choosePlan}>
+        <button className={styles.choosePlan} onClick={() => selectPlan({ index: 0, name: 'Josefa' })}>
           Escoger Plan
           <div className={styles.divider} />
           <div className={styles.price}>
@@ -89,7 +89,7 @@ const ChoosePlanModal = () => (
         <p className={styles.note}>
           Este plan es perfecto para ti si ya tienes un sistema de mayoreo y cuentas con mas de 10 productos para vender y tienes una buena producción!
         </p>
-        <button className={styles.choosePlan}>
+        <button className={styles.choosePlan} onClick={() => selectPlan({ index: 1, name: 'Sor Juana' })}>
           Escoger Plan
           <div className={styles.divider} />
           <div className={styles.price}>
@@ -133,7 +133,7 @@ const ChoosePlanModal = () => (
         <p className={styles.note}>
           Este plan es perfecto para ti si ya tienes un sistema de mayoreo y cuentas con mas de 10 productos para vender.
         </p>
-        <button className={styles.choosePlan}>
+        <button className={styles.choosePlan} onClick={() => selectPlan({ index: 3, name: 'Frida' })}>
           Escoger Plan
           <div className={styles.divider} />
           <div className={styles.price}>

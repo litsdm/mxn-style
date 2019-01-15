@@ -1,6 +1,6 @@
 import { SELECT_PLAN } from '../actions/plan';
 
-const initialState = 0
+const initialState = null;
 
 const users = (state = initialState, { type, plan }) => {
   switch (type) {

@@ -4,8 +4,10 @@
   background-color: #F9F9FB;
   align-items: center;
   display: flex;
+  height: calc(100vh - 74px);
   justify-content: center;
   padding: 24px;
+  padding: 0 24px;
 }
 
 .card,

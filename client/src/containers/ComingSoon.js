@@ -35,7 +35,7 @@ class ComingSoonPage extends Component {
 
   render() {
     const { email } = this.state;
-    return <ComingSoon email={email} handleChange={this.handleChange} subscribe={this.openModal} />
+    return <ComingSoon email={email} handleChange={this.handleChange} subscribe={this.handleSubscribe} />
   }
 }
 

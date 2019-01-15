@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Register from 'components/Register';
+
+const mapStateToProps = ({ plan }) => (
+  {
+    plan
+  }
+);
 
 class RegisterPage extends Component {
   state = {
@@ -18,6 +25,14 @@ class RegisterPage extends Component {
       interior: '',
       postalCode: '',
       city: ''
+    }
+  }
+
+  componentDidMount() {
+    const { plan } = this.props;
+
+    if (!plan) {
+      document.getElementById('choosePlanModal').style.display = 'block';
     }
   }
 
@@ -50,4 +65,4 @@ class RegisterPage extends Component {
   }
 }
 
-export default RegisterPage;
+export default connect(mapStateToProps, null)(RegisterPage);
